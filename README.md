@@ -35,3 +35,17 @@ ExpenseSplitterApp/
 │── .github/workflows/        # CI/CD pipelines
 │── README.md
 ~~~
+
+
+# Running the frontend
+
+Prerequisites
+- React
+- NPM
+- Tailwind v4 using Vite
+
+Run inside `frontend` folder
+> npm install
+
+For local HMR development
+> npm run dev
