@@ -44,6 +44,15 @@ Adjust the values in the `.env` file according to your local setup.
    uv run python manage.py migrate
    ```
 
+## API Endpoints
+
+### Health Check
+To verify the API is running properly:
+```
+GET http://localhost:8000/health/
+```
+Returns a 200 OK response when the service is operational.
+
 ## Running the Application
 
 ### FastAPI Development Server
