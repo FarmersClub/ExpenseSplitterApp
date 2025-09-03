@@ -51,12 +51,12 @@ ExpenseSplitterApp/
 
 ## Getting Started
 
+### Backend Setup
+
 ### Prerequisites
 - Python 3.13+
 - PostgreSQL
 - uv (Python package manager)
-
-### Backend Setup
 
 1. Navigate to the backend directory:
    ```bash
@@ -85,3 +85,18 @@ ExpenseSplitterApp/
    ```
 
 6. Access the API documentation at http://localhost:8000/docs
+~~~
+
+
+### Frontend Setup
+
+#### Prerequisites
+- React
+- NPM
+- Tailwind v4 using Vite
+
+1. Run inside `frontend` folder
+> npm install
+
+2. For local HMR development
+> npm run dev
