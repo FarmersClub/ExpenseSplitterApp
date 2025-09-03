@@ -60,3 +60,30 @@ When running the FastAPI server, API documentation is available at:
 - The `.env` file contains sensitive information and is excluded from version control
 - Always use environment variables for secrets and configuration
 - Change the `SECRET_KEY` in production environments
+
+## Docker Setup
+
+### Prerequisites
+- Docker
+- Docker Compose
+
+### Running with Docker
+
+The backend and database can be run using Docker Compose:
+
+```bash
+# From the project root directory
+docker-compose up
+```
+
+This will start:
+- PostgreSQL database on port 5433 (mapped to internal port 5432)
+- Backend service on port 8000
+
+### Development with Docker
+
+The Docker setup includes volume mounts for the backend code, enabling hot-reloading during development. Changes made to your local files will be reflected in the running container.
+
+### Environment Variables in Docker
+
+Environment variables are defined in the `docker-compose.yml` file. For local development, these values are set directly in the compose file. For production, you should use environment-specific configuration.
