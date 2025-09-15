@@ -12,7 +12,7 @@ This is the backend service for the ExpenseSplitterApp, a platform designed to h
 ## Environment Setup
 
 ### Prerequisites
-- Python 3.10+
+- Python 3.13+
 - PostgreSQL
 - uv (Python package manager)
 
