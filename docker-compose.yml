@@ -27,6 +27,19 @@ services:
       - POSTGRES_PASSWORD=${DB_PASSWORD}
     ports:
       - "5433:5432"
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend  
+      - db
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules 
+    command: ["npm", "run", "dev", "--", "--host"]  
 
 volumes:
   postgres_data:
