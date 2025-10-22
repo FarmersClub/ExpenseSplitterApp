@@ -27,6 +27,7 @@ ExpenseSplitterApp/
 │   ├── pyproject.toml       # Python dependencies
 │   ├── .env.example         # Example environment variables
 │   └── README.md            # Backend documentation
+│   └── Dockerfile
 │
 │── infra/
 │   ├── ecs-fargate/          # Terraform/CDK infra
@@ -80,15 +81,21 @@ ExpenseSplitterApp/
    docker-compose up -d
    ```
 
-4. Access the API at http://localhost:8000
-   - API documentation: http://localhost:8000/docs
-   - API documentation (alternative): http://localhost:8000/redoc
-   - Health check: http://localhost:8000/health/
+4. URL access
+   - Backend
+      - API at http://localhost:8000
+      - API documentation: http://localhost:8000/docs
+      - API documentation (alternative): http://localhost:8000/redoc
+      - Health check: http://localhost:8000/health/
+   - Frontend
+      - URL at http://localhost:5173/ 
+
 
 5. To view logs:
    ```bash
    docker-compose logs backend  # Backend logs
    docker-compose logs db       # Database logs
+   docker-compose logs frontend # Frontend logs
    ```
 
 6. To stop the containers:
@@ -98,7 +105,7 @@ ExpenseSplitterApp/
 
 ### Development Workflow with Docker
 
-1. **Code Changes**: The backend code is mounted as a volume, so changes will be automatically detected and the server will reload.
+1. **Code Changes**: The backend code is mounted as a volume, so changes will be automatically detected and the server will reload. Changes in frontend code are also automatically detected as a hot-reload.
 
 2. **Database Migrations**:
    ```bash
